@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.TelaInicial">
+
+    <TextView
+        android:id="@+id/text_welcome"
+        android:layout_width="316dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="253dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="25dp"
+        android:gravity="center"
+        android:text="Olá, Fulano"
+        android:textSize="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_width="222dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="94dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="95dp"
+        android:layout_marginBottom="338dp"
+        android:text="Iniciar"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_welcome" />
+
+    <Button
+        android:id="@+id/btn_relatorio"
+        android:layout_width="222dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="116dp"
+        android:layout_marginBottom="250dp"
+        android:text="Ver Relatório"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_start" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/login">
+
+    <fragment
+        android:id="@+id/login"
+        android:name="com.example.duolingo.fragments.Login"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_login_to_cadastro"
+            app:destination="@id/cadastro" />
+        <action
+            android:id="@+id/action_login_to_telaInicial"
+            app:destination="@id/telaInicial" />
+    </fragment>
+    <fragment
+        android:id="@+id/cadastro"
+        android:name="com.example.duolingo.fragments.Cadastro"
+        android:label="fragment_cadastro"
+        tools:layout="@layout/fragment_cadastro" >
+        <action
+            android:id="@+id/action_cadastro_to_login"
+            app:destination="@id/login" />
+    </fragment>
+    <fragment
+        android:id="@+id/exercicioCompletar"
+        android:name="com.example.duolingo.fragments.ExercicioCompletar"
+        android:label="fragment_exercicio_completar"
+        tools:layout="@layout/fragment_exercicio_completar" />
+    <fragment
+        android:id="@+id/exercicioMultiplaEscolha"
+        android:name="com.example.duolingo.fragments.ExercicioMultiplaEscolha"
+        android:label="fragment_exercicio_multipla_escolha"
+        tools:layout="@layout/fragment_exercicio_multipla_escolha" >
+        <action
+            android:id="@+id/action_exercicioMultiplaEscolha_to_exercicioSom"
+            app:destination="@id/exercicioSom" />
+    </fragment>
+    <fragment
+        android:id="@+id/exercicioSom"
+        android:name="com.example.duolingo.fragments.ExercicioSom"
+        android:label="fragment_exercicio_som"
+        tools:layout="@layout/fragment_exercicio_som" >
+        <action
+            android:id="@+id/action_exercicioSom_to_telaInicial"
+            app:destination="@id/telaInicial" />
+    </fragment>
+    <fragment
+        android:id="@+id/telaInicial"
+        android:name="com.example.duolingo.fragments.TelaInicial"
+        android:label="fragment_tela_inicial"
+        tools:layout="@layout/fragment_tela_inicial" >
+        <action
+            android:id="@+id/action_telaInicial_to_exercicioMultiplaEscolha"
+            app:destination="@id/exercicioMultiplaEscolha" />
+        <action
+            android:id="@+id/action_telaInicial_to_relatorio"
+            app:destination="@id/relatorio" />
+    </fragment>
+    <fragment
+        android:id="@+id/testeBD"
+        android:name="com.example.duolingo.TesteBD"
+        android:label="fragment_teste_b_d"
+        tools:layout="@layout/fragment_teste_b_d" />
+    <fragment
+        android:id="@+id/relatorio"
+        android:name="com.example.duolingo.fragments.Relatorio"
+        android:label="fragment_relatorio"
+        tools:layout="@layout/fragment_relatorio" />
+</navigation>
